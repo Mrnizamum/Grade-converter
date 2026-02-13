@@ -2,126 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Marks to Grade Converter | Free Online Tool</title>
+  <title>Marks to Grade Converter | Free Online Grade Calculator</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Convert marks into grades instantly using this free marks to grade converter. Simple and accurate for students.">
+  <meta name="description" content="Use this free marks to grade converter to instantly calculate your exam grade from marks. Simple, fast, and accurate for students.">
 
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f6f8;
+      margin: 0;
       padding: 20px;
+      color: #333;
     }
+
     .container {
-      max-width: 400px;
+      max-width: 420px;
       margin: auto;
-      background: white;
+      background: #ffffff;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
     h1 {
       text-align: center;
+      margin-bottom: 10px;
     }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
     input {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       font-size: 16px;
       margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
+
     button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       font-size: 16px;
       margin-top: 15px;
       background: #007bff;
-      color: white;
+      color: #fff;
       border: none;
       border-radius: 5px;
+      cursor: pointer;
     }
+
     button:hover {
       background: #0056b3;
     }
+
     .result {
       margin-top: 15px;
       font-size: 18px;
       font-weight: bold;
       text-align: center;
     }
+
+    .cta {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
   </style>
 </head>
-<h2>How Marks Are Converted to Grades</h2>
 
-<p>
-A marks to grade converter helps students quickly understand their exam performance.
-Instead of manually checking grading charts, this tool instantly converts marks into grades
-based on standard grading systems commonly used in schools and colleges.
-</p>
-
-<p>
-Students can use this grade calculator to estimate their results before official announcements.
-It is especially useful during exam and result seasons when students want quick clarity.
-</p>
-  <h2>Frequently Asked Questions</h2>
-
-<h3>What is a marks to grade converter?</h3>
-<p>
-A marks to grade converter is an online tool that converts exam marks into grades
-based on predefined grading criteria.
-</p>
-
-<h3>Is this marks to grade calculator free?</h3>
-<p>
-Yes, this tool is completely free to use and provides instant results.
-</p>
-
-<h3>Can I use this tool for college exams?</h3>
-<p>
-Yes, it can be used for school and college-level grading systems that follow
-percentage-based evaluation.
-</p>
-
-<h3>Does this tool store my marks?</h3>
-<p>
-No, the calculation happens instantly in your browser and no data is stored.
-</p>
 <body>
 
-<div class="container">
-  <h1>Marks to Grade Converter</h1>
+  <div class="container">
 
-  <p>Enter your exam marks below to instantly find your grade.</p>
+    <!-- MAIN TITLE -->
+    <h1>Marks to Grade Converter</h1>
+    <p style="text-align:center;">
+      Enter your exam marks below to instantly find your grade.
+    </p>
 
-  <input type="number" id="marks" placeholder="Enter marks (0–100)">
-  <button onclick="convertGrade()">Convert</button>
+    <!-- TOOL -->
+    <input type="number" id="marks" placeholder="Enter marks (0–100)">
+    <button onclick="convertGrade()">Convert</button>
+    <div class="result" id="result"></div>
 
-  <div class="result" id="result"></div>
-</div>
+    <!-- INTERNAL CTA -->
+    <div class="cta">
+      More student tools coming soon: Attendance Calculator & GPA Calculator.
+    </div>
 
-<script>
-function convertGrade() {
-  const marks = Number(document.getElementById("marks").value);
-  let grade = "";
+    <!-- EXPLANATION -->
+    <h2>How Marks Are Converted to Grades</h2>
 
-  if (marks < 0 || marks > 100 || isNaN(marks)) {
-    grade = "❌ Please enter valid marks (0–100)";
-  } else if (marks >= 90) {
-    grade = "A+";
-  } else if (marks >= 80) {
-    grade = "A";
-  } else if (marks >= 70) {
-    grade = "B";
-  } else if (marks >= 60) {
-    grade = "C";
-  } else if (marks >= 50) {
-    grade = "D";
-  } else {
-    grade = "F (Fail)";
-  }
+    <p>
+      A marks to grade converter helps students quickly understand their exam performance.
+      Instead of manually checking grading charts, this tool instantly converts marks into grades
+      based on standard grading systems commonly used in schools and colleges.
+    </p>
 
-  document.getElementById("result").innerText = "Grade: " + grade;
-}
-</script>
+    <p>
+      Students use this grade calculator to estimate results before official announcements.
+      It is especially useful during exam and result seasons when students want quick clarity.
+    </p>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is a marks to grade converter?</h3>
+    <p>
+      A marks to grade converter is an online tool that converts exam marks into grades
+      using predefined grading criteria.
+    </p>
+
+    <h3>Is this marks to grade calculator free?</h3>
+    <p>
+      Yes. This tool is completely free to use and provides instant results.
+    </p>
+
+    <h3>Can I use this tool for college exams?</h3>
+    <p>
+      Yes. It works for school and college-level grading systems that use percentage-based evaluation.
+    </p>
+
+    <h3>Does this tool store my marks?</h3>
+    <p>
+      No. All calculations happen instantly in your browser and no data is stored.
+    </p>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function convertGrade() {
+      const marks = Number(document.getElementById("marks").value);
+      let grade = "";
+
+      if (isNaN(marks) || marks < 0 || marks > 100) {
+        grade = "_toggle_Invalid marks (0–100)";
+      } else if (marks >= 90) {
+        grade = "A+";
+      } else if (marks >= 80) {
+        grade = "A";
+      } else if (marks >= 70) {
+        grade = "B";
+      } else if (marks >= 60) {
+        grade = "C";
+      } else if (marks >= 50) {
+        grade = "D";
+      } else {
+        grade = "F (Fail)";
+      }
+
+      document.getElementById("result").innerText = "Grade: " + grade;
+    }
+  </script>
 
 </body>
 </html>
