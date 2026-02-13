@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marks to Grade Converter | Free Online Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convert marks into grades instantly using this free marks to grade converter. Simple and accurate for students.">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 15px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Marks to Grade Converter</h1>
+
+  <p>Enter your exam marks below to instantly find your grade.</p>
+
+  <input type="number" id="marks" placeholder="Enter marks (0–100)">
+  <button onclick="convertGrade()">Convert</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+function convertGrade() {
+  const marks = Number(document.getElementById("marks").value);
+  let grade = "";
+
+  if (marks < 0 || marks > 100 || isNaN(marks)) {
+    grade = "❌ Please enter valid marks (0–100)";
+  } else if (marks >= 90) {
+    grade = "A+";
+  } else if (marks >= 80) {
+    grade = "A";
+  } else if (marks >= 70) {
+    grade = "B";
+  } else if (marks >= 60) {
+    grade = "C";
+  } else if (marks >= 50) {
+    grade = "D";
+  } else {
+    grade = "F (Fail)";
+  }
+
+  document.getElementById("result").innerText = "Grade: " + grade;
+}
+</script>
+
+</body>
+</html>
